@@ -7,11 +7,11 @@ require "conditional_cache/version"
 Gem::Specification.new do |s|
   s.name        = "conditional_cache"
   s.version     = ConditionalCache::VERSION
-  s.authors     = [""]
-  s.email       = [""]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of ConditionalCache."
-  s.description = "TODO: Description of ConditionalCache."
+  s.authors     = ["Krishna Manjunath"]
+  s.email       = ["krishnam.gubbi@gmail.com"]
+  s.homepage    = "https://github.com/manjuk1/conditional_cache"
+  s.summary     = "ConditionalCache - A Simple rails plugin to support conditional get."
+  s.description = "ConditionalCache - A Simple rails plugin to support conditional get."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]

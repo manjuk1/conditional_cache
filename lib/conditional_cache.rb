@@ -33,12 +33,16 @@ module ConditionalCache
 
   def conditional_get *models
     raise "atleast one model must exist(usage: if_none_match :model_name1, :model_name2)" if models.empty?
-    fresh_when cache_key(models), strong_etag: "#{current_user.id} #{request.url} #{request.request_parameters.to_s}"
+    fresh_when cache_key(models), strong_etag: "#{conditional_get_key} #{request.url} #{request.request_parameters.to_s}"
   end
-
 
   def cache_key models
     obj = CacheKey.new models
     return obj
   end
+
+  def conditional_get_key
+    "override this method to provide your own user specific key"
+  end
+
 end

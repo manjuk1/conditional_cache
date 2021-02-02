@@ -1,5 +1,4 @@
 class UsersController < ApplicationController
-  include ConditionalCache
 
   def index
     # Usage:

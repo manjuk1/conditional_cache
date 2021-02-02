@@ -15,6 +15,12 @@ Rails by default supports conditional get based on ActiveRecord Object or Active
 ```ruby
 class ApplicationController < ActionController::Base
   include ConditionalCache
+  
+  # override this method to support conditional caching at user level
+  def conditional_get_key
+    # return user or session specific identifier. Ex: auth_token or session id or user id
+    # current_user.id
+  end
 end
 ```
 
